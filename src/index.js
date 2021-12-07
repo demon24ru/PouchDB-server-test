@@ -11,7 +11,7 @@ const MPouchDB = PouchDB.defaults({
     adapter: 'webSQL'
 })
 
-const replDB = new MPouchDB('companyCards');
+// const replDB = new MPouchDB('companyCards');
 
 const express = require('express');
 const app = express();
