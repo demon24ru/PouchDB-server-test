@@ -4,14 +4,22 @@ const PouchDB = require('pouchdb-core')
     .plugin(require('pouchdb-replication'))
     .plugin(require('pouchdb-mapreduce'))
     .plugin(require('pouchdb-find'))
+    .plugin(require('pouchdb-size'))
     .plugin(require('pouchdb-adapter-sqlite-node'))
     .plugin(require('pouchdb-debug'));
 
 const MPouchDB = PouchDB.defaults({
-    adapter: 'webSQL'
+    adapter: 'webSQL',
+    auto_compaction: true,
+    revs_limit: 10,
 })
 
-// const replDB = new MPouchDB('companyCards');
+const replDB = new MPouchDB('queue');
+// replDB.installSizeWrapper();
+// replDB.info().then(function (resp) {
+//     //resp will contain disk_size
+//     console.log(resp)
+// })
 
 const express = require('express');
 const app = express();

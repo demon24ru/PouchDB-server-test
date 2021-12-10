@@ -11,16 +11,16 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/pouchdb/pouchdb",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-pouchdb": "^4.2.0",
     "pouchdb-adapter-http": "^7.2.1",
+    "pouchdb-adapter-sqlite-node": "git+https://github.com/demon24ru/pouchdb-adapter-sqlite-node.git",
     "pouchdb-core": "^7.2.1",
+    "pouchdb-debug": "^7.2.1",
     "pouchdb-find": "^7.2.1",
     "pouchdb-mapreduce": "^7.2.1",
     "pouchdb-replication": "^7.2.1",
-    "pouchdb-debug": "^7.2.1",
-    "express": "^4.17.1",
-    "express-pouchdb": "^4.2.0",
-    "pouchdb-adapter-sqlite-node": "git+https://github.com/demon24ru/pouchdb-adapter-sqlite-node.git",
-    "jsonwebtoken": "^8.5.1"
+    "pouchdb-size": "git+https://github.com/demon24ru/pouchdb-size.git"
   },
   "files": []
 }
